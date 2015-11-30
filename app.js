@@ -26,6 +26,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// data accessible in the locals object
+app.locals.appdata = require('./data.json');
+
 app.use('/', routes);
 // app.use('/users', users);
 
