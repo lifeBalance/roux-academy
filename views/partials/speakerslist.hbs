@@ -14,10 +14,7 @@
               <img class="speaker" src="/images/speakers/{{this.shortname}}_tn.jpg" alt="Photo of {{this.name}}">
             </a>
 
-            {{!-- How to output 'this.summary' for /speakers route? --}}
-            {{!-- How to output absolutely nothing for /home route? --}}
-            {{!-- How to output 'this.description' for /speakers/:speakerid route? --}}
-            {{{this.summary}}}
+            {{{artistInfo ../page}}}
           </p>
         </article>
       {{/each}}

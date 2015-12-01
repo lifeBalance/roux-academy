@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expHbs = require('express-handlebars');
+var helpers = require('./lib/helpers');
 
 var routes = require('./routes/index');
 // var users = require('./routes/users');
@@ -17,8 +18,10 @@ app.locals.copyright = new Date().getFullYear();
 // view engine setup
 app.engine('hbs', expHbs({
   defaultLayout: 'main',
-  extname: 'hbs'
-  }));
+  extname: 'hbs',
+  helpers: helpers
+}));
+
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
@@ -33,7 +36,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals.appdata = require('./data.json');
 
 app.use('/', routes);
-// app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
