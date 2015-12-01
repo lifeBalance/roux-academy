@@ -1,18 +1,23 @@
 <article class="speakerslist">
   <section class="layout">
     <div class="speakers">
-      {{#each artists.item}}
+      {{#each speakers}}
         <article class="artist group">
-          <h3>{{item.title}}
+          <h3>{{this.title}}
             <span class="small">with
-              <a href="/speakers/{{item.shortname}}">{{item.name}}</a>
+              <a href="/speakers/{{this.shortname}}">{{this.name}}</a>
             </span>
           </h3>
 
           <p>
-            <a href="/speakers/{{item.shortname}}">
-              <img class="speaker" src="/images/speakers/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+            <a href="/speakers/{{this.shortname}}">
+              <img class="speaker" src="/images/speakers/{{this.shortname}}_tn.jpg" alt="Photo of {{this.name}}">
             </a>
+
+            {{!-- How to output 'this.summary' for /speakers route? --}}
+            {{!-- How to output absolutely nothing for /home route? --}}
+            {{!-- How to output 'this.description' for /speakers/:speakerid route? --}}
+            {{{this.summary}}}
           </p>
         </article>
       {{/each}}

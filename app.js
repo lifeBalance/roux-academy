@@ -15,7 +15,10 @@ var app = express();
 app.locals.copyright = new Date().getFullYear();
 
 // view engine setup
-app.engine('hbs', expHbs({defaultLayout: 'main', extname: 'hbs'}));
+app.engine('hbs', expHbs({
+  defaultLayout: 'main',
+  extname: 'hbs'
+  }));
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
