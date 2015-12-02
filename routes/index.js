@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/* GET artistList page. */
+/* GET artist list page. */
 router.get('/speakers', function(req, res, next) {
   var artistArtwork = [];
   var allSpeakers = [];
@@ -40,7 +40,7 @@ router.get('/speakers', function(req, res, next) {
   });
 });
 
-/* GET artistDetail page. */
+/* GET artist detail page. */
 router.get('/speakers/:speakerid', function(req, res, next) {
   var artistArtwork = [];
   var individualSpeaker = [];
