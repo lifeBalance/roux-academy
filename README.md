@@ -13,7 +13,7 @@ And open your browser at [localhost:3000](http://localhost:3000/)
 You can also see it [live here][l9].
 
 ## Express templates
-I wanted to use the cool [Express app generator][l5] to create a lot of the boilerplate code an Express app needs to start up. At the moment of this writing, using the **generator** the templates engine defaults to [JADE][l6], but it also offers a couple of alternative templating options to choose among:
+I wanted to use the cool [Express app generator][l5] to create a lot of the boilerplate code an Express app needs to start up. At the moment of this writing, using the **generator** the templates engine defaults to [JADE](http://jade-lang.com/), but it also offers a couple of alternative templating options to choose among:
 
 * [EJS][l3], using the `-e` or `--ejs` options.
 * [Handlebars][l4], using the `--hbs` option.
